@@ -1,0 +1,107 @@
+<!-- html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <title>Navbar</title>
+    <link rel="stylesheet" href="nav.css" />
+
+    <!-- open sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- IBM PLX MONO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="main-nav">
+      <div class="web-logo">
+        <ion-icon style="color: green; font-size: 2rem;" name="logo-ionic"></ion-icon>
+      </div>
+
+      <nav class="nav-list">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li class="product-box">
+            <a href="#">PRODUCTS<span class="carrot">&#176;</span> </a>
+          </li>
+          <li><a href="#">SERVICES</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <div class="product-box-list">
+      <ol>
+        <li id="click-boxlinks">
+          <a class="click-boxlinks" href="#">List one</a>
+        </li>
+        <li id="click-boxlinks">
+          <a class="click-boxlinks" href="#">List one</a>
+        </li>
+        <li id="click-boxlinks">
+          <a class="click-boxlinks" href="#">List one</a>
+        </li>
+        <li id="click-boxlinks">
+          <a class="click-boxlinks" href="#">List one</a>
+        </li>
+        <li id="click-boxlinks">
+          <a class="click-boxlinks" href="#">List one</a>
+        </li>
+      </ol>
+    </div>
+
+    <script>
+      var prod = document.querySelector(".product-box");
+      var prb = document.querySelector(".product-box-list");
+
+      prod.addEventListener("click", function (e) {
+        e.preventDefault();
+        prb.classList.toggle("product-box-list-dis");
+      });
+
+      prod.addEventListener("click", function (e) {
+        e.preventDefault();
+        prb.classList.toggle("product-box-list");
+      });
+
+
+      var btnNavEl = document.querySelector('.btn-mobile-nav');
+      var headerEl = document.querySelector('.main-nav');
+
+      btnNavEl.addEventListener('click', function() {
+        headerEl.classList.toggle('nav-open');
+      });
+
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
+
